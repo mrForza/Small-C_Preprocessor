@@ -1,0 +1,3 @@
+C:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/cmake-build-debug/CMakeFiles/Small_C_Preprocessor.dir
+C:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
