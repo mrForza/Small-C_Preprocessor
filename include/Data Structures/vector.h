@@ -1,24 +1,20 @@
 #ifndef SMALL_C_PREPROCESSOR_VECTOR_H
 #define SMALL_C_PREPROCESSOR_VECTOR_H
 
+#define MIN_CAPACITY 4;
+
 struct Vector {
-    int* data;
+    void** data;
     unsigned int size;
     unsigned int capacity;
+
+    void (*init_vector) (struct Vector* vector);
+    void (*copy_vector) (struct Vector* vector, struct Vector* other_vector);
+    void (*destroy_vector) (struct Vector* vector);
+
+    void (*push) (struct Vector* vector, void* pointer_to_value);
+    void (*pop) (struct Vector* vector);
+    void (*get) (struct Vector* vector, int index);
 };
-
-struct Vector* init_vector(unsigned long capacity); // Constructor
-
-struct Vector* copy_vector(struct Vector* other); // Copy constructor
-
-void push_to_vector(struct Vector* vector, int num); // Push
-
-int get_num(struct Vector* vector, int index); // Get
-
-void pop_from_vector(struct Vector* vector); // Pop
-
-void print_nums(struct Vector* vector); // Print
-
-void destroy_vector(struct Vector* vector); // Destructor
 
 #endif
