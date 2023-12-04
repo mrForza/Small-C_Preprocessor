@@ -17,6 +17,8 @@ struct Vector {
     void* (*get) (struct Vector* vector, int index);
 };
 
+void init_references_to_functions(struct Vector* vector);
+
 void init_vector(struct Vector* vector, int capacity);
 
 void destroy_vector(struct Vector* vector);

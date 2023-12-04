@@ -1,6 +1,5 @@
 #include <stdlib.h>
-#include <stdio.h>
-#include <Data Structures/vector.h>
+#include <data_structures/vector.h>
 
 void init_references_to_functions(struct Vector* vector) {
     vector->init_vector = &init_vector;

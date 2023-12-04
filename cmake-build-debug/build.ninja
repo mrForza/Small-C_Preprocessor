@@ -52,16 +52,16 @@ build cmake_object_order_depends_target_Small_C_Preprocessor: phony || CMakeFile
 build CMakeFiles/Small_C_Preprocessor.dir/src/main.c.obj: C_COMPILER__Small_C_Preprocessor_Debug C$:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/src/main.c || cmake_object_order_depends_target_Small_C_Preprocessor
   DEP_FILE = CMakeFiles\Small_C_Preprocessor.dir\src\main.c.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
-  INCLUDES = -IC:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include
+  INCLUDES = -IC:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include -IC:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/tests
   OBJECT_DIR = CMakeFiles\Small_C_Preprocessor.dir
   OBJECT_FILE_DIR = CMakeFiles\Small_C_Preprocessor.dir\src
 
-build CMakeFiles/Small_C_Preprocessor.dir/include/Data_Structures/vector.c.obj: C_COMPILER__Small_C_Preprocessor_Debug C$:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include/Data$ Structures/vector.c || cmake_object_order_depends_target_Small_C_Preprocessor
-  DEP_FILE = CMakeFiles\Small_C_Preprocessor.dir\include\Data_Structures\vector.c.obj.d
+build CMakeFiles/Small_C_Preprocessor.dir/include/data_structures/vector.c.obj: C_COMPILER__Small_C_Preprocessor_Debug C$:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include/data_structures/vector.c || cmake_object_order_depends_target_Small_C_Preprocessor
+  DEP_FILE = CMakeFiles\Small_C_Preprocessor.dir\include\data_structures\vector.c.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
-  INCLUDES = -IC:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include
+  INCLUDES = -IC:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include -IC:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/tests
   OBJECT_DIR = CMakeFiles\Small_C_Preprocessor.dir
-  OBJECT_FILE_DIR = CMakeFiles\Small_C_Preprocessor.dir\include\Data_Structures
+  OBJECT_FILE_DIR = CMakeFiles\Small_C_Preprocessor.dir\include\data_structures
 
 
 # =============================================================================
@@ -71,7 +71,7 @@ build CMakeFiles/Small_C_Preprocessor.dir/include/Data_Structures/vector.c.obj: 
 #############################################
 # Link the executable Small_C_Preprocessor.exe
 
-build Small_C_Preprocessor.exe: C_EXECUTABLE_LINKER__Small_C_Preprocessor_Debug CMakeFiles/Small_C_Preprocessor.dir/src/main.c.obj CMakeFiles/Small_C_Preprocessor.dir/include/Data_Structures/vector.c.obj
+build Small_C_Preprocessor.exe: C_EXECUTABLE_LINKER__Small_C_Preprocessor_Debug CMakeFiles/Small_C_Preprocessor.dir/src/main.c.obj CMakeFiles/Small_C_Preprocessor.dir/include/data_structures/vector.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Small_C_Preprocessor.dir
