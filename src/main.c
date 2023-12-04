@@ -5,8 +5,7 @@
 #include <windows.h>
 
 int main() {
-    char* name = form_complex_name("", "");
-    printf("%s", name);
+
     //test_init_and_destroy();
     return 0;
 }
