@@ -15,4 +15,5 @@ void init_vector(struct Vector* vector, int capacity) {
 
 void destroy_vector(struct Vector* vector) {
     free(vector->data);
+    free(vector);
 }

@@ -90,7 +90,7 @@ CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Small_C_Preprocessor
 CMAKE_LINKER:FILEPATH=C:/Programs/Programming/CLion/CLion 2023.1.2/bin/mingw/bin/ld.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/Programs/PROGRA~1/CLion/CLION2~1.2/bin/ninja/win/x64/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Programs/Programming/CLion/CLion 2023.1.2/bin/ninja/win/x64/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
