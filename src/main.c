@@ -1,11 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "data_structures/vector.h"
-#include "../tests/data_structures/test_vector.c"
-#include <windows.h>
+#include "test_file_validators.c"
 
 int main() {
-
-    //test_init_and_destroy();
+    test_validate_filename();
+    test_validate_extension();
     return 0;
 }
