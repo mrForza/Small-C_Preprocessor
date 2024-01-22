@@ -28,13 +28,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
 				"line" : 8,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 7,
+				"line" : 9,
 				"parent" : 0
 			}
 		]
@@ -56,6 +62,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "C:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/tests"
 				}
 			],
 			"language" : "C",
@@ -116,7 +126,8 @@
 			"sourceIndexes" : 
 			[
 				1,
-				2
+				2,
+				4
 			]
 		}
 	],
@@ -130,19 +141,24 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/Data Structures/stack.h",
+			"path" : "include/file_handler/file_handler.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/Data Structures/vector.h",
+			"path" : "include/file_handler/file_validator.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "include/Data Structures/vector.c",
+			"path" : "include/file_handler/file_validator.c",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "tests/tests.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
