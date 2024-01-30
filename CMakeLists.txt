@@ -10,8 +10,9 @@ include_directories(${TEST_DIR})
 add_executable(
     Small_C_Preprocessor
     src/main.c
-        include/file_handler/file_handler.h
-        include/file_handler/file_validator.h
-        include/file_handler/file_validator.c
+    include/file_handler/file_handler.h
+    include/file_handler/file_validator.h
+    include/file_handler/file_validator.c
     tests/tests.h
+    include/file_handler/file_handler.c
 )

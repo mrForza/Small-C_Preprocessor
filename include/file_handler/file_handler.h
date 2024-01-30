@@ -1,16 +1,15 @@
 #include "stdio.h"
 
 
-struct file_descriptor {
+struct file_handler {
+    FILE* file_pointer;
     const char* name;
     const char* extension;
     unsigned long long size;
 };
 
 
-struct file_handler {
-    FILE* file_pointer;
-};
+char* get_full_name();
 
 
-const char* get_full_name();
+char** split_full_name(const char* full_name);
