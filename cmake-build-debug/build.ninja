@@ -63,6 +63,13 @@ build CMakeFiles/Small_C_Preprocessor.dir/include/file_handler/file_validator.c.
   OBJECT_DIR = CMakeFiles\Small_C_Preprocessor.dir
   OBJECT_FILE_DIR = CMakeFiles\Small_C_Preprocessor.dir\include\file_handler
 
+build CMakeFiles/Small_C_Preprocessor.dir/include/file_handler/file_handler.c.obj: C_COMPILER__Small_C_Preprocessor_Debug C$:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include/file_handler/file_handler.c || cmake_object_order_depends_target_Small_C_Preprocessor
+  DEP_FILE = CMakeFiles\Small_C_Preprocessor.dir\include\file_handler\file_handler.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  INCLUDES = -IC:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/include -IC:/Users/inter/Documents/Projects/C/Small-C_Preprocessor/tests
+  OBJECT_DIR = CMakeFiles\Small_C_Preprocessor.dir
+  OBJECT_FILE_DIR = CMakeFiles\Small_C_Preprocessor.dir\include\file_handler
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Small_C_Preprocessor
@@ -71,7 +78,7 @@ build CMakeFiles/Small_C_Preprocessor.dir/include/file_handler/file_validator.c.
 #############################################
 # Link the executable Small_C_Preprocessor.exe
 
-build Small_C_Preprocessor.exe: C_EXECUTABLE_LINKER__Small_C_Preprocessor_Debug CMakeFiles/Small_C_Preprocessor.dir/src/main.c.obj CMakeFiles/Small_C_Preprocessor.dir/include/file_handler/file_validator.c.obj
+build Small_C_Preprocessor.exe: C_EXECUTABLE_LINKER__Small_C_Preprocessor_Debug CMakeFiles/Small_C_Preprocessor.dir/src/main.c.obj CMakeFiles/Small_C_Preprocessor.dir/include/file_handler/file_validator.c.obj CMakeFiles/Small_C_Preprocessor.dir/include/file_handler/file_handler.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Small_C_Preprocessor.dir
