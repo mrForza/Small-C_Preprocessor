@@ -1,6 +1,7 @@
 #include "file_handler.h"
 #include "file_validator.h"
-#include <stdlib.h>
+#include "stdlib.h"
+#include "string.h"
 
 #define MAX_FILENAME_LENGTH 256
 
@@ -26,16 +27,17 @@ char* get_full_name() {
 
 char** split_full_name(const char* full_name) {
     int dot_index = 0;
-    for (int i = 0; i < sizeof(full_name); ++i) {
+    for (int i = 0; i < strlen(full_name); ++i) {
         if (full_name[i] == '.') {
             dot_index = i;
             break;
         }
     }
+
     char* name = (char*)malloc(dot_index + 1); // +1 for \0 symbol in the end of name
-    char* extension = (char*)malloc(sizeof(full_name) - dot_index + 1);
+    char* extension = (char*)malloc(strlen(full_name) - dot_index);
     int j = 0;
-    for (int i = 0; i < sizeof(full_name); ++i) {
+    for (int i = 0; i < strlen(full_name); ++i) {
         if (i < dot_index) {
             name[i] = full_name[i];
         } else if (i > dot_index) {
@@ -45,12 +47,13 @@ char** split_full_name(const char* full_name) {
             name[dot_index] = '\0';
         }
 
-        if (i == sizeof(full_name) - 1) {
-            extension[j + 1] = '\0';
+        if (i == strlen(full_name) - 1) {
+            extension[j] = '\0';
         }
     }
-
-    char** array = (char**)malloc(sizeof(name) + sizeof(extension));
+    printf("!!! %s", name);
+    printf("!!! %s", extension);
+    char** array = (char**)malloc(strlen(name) + strlen(extension));
     array[0] = name;
     array[1] = extension;
     return array;

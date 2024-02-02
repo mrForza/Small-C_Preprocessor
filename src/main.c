@@ -1,6 +1,6 @@
 #include "test_file_validators.c"
-#include "file_handler/file_handler.h"
 #include "stdio.h"
+#include "preprocessor/preprocessor.h"
 
 const char* GREETINGS_TEXT = "The simple Small-C preprocessor\n";
 
@@ -14,10 +14,11 @@ const char* LOGO = "\n"
 
 
 int main() {
+    setvbuf(stdout, NULL, _IOLBF, 0);
     printf("%s", GREETINGS_TEXT);
     printf("%s", LOGO);
     struct file_handler handler;
-    FILE* file_pointer;
+    FILE* open_file_pointer;
     while (true) {
         char* file_name = get_full_name();
         if (validate_filename(file_name)) {
@@ -25,18 +26,19 @@ int main() {
             char* name = splitted_info[0];
             char* extension = splitted_info[1];
             if (validate_extension(extension)) {
-                file_pointer = fopen(file_name, "r");
-                if (validate_file_existance(file_pointer)) {
-                    handler.file_pointer = file_pointer;
+                open_file_pointer = fopen(file_name, "r");
+                if (validate_file_existance(open_file_pointer)) {
+                    handler.file_pointer = open_file_pointer;
                     handler.name = name;
                     handler.extension = extension;
-                    fseek(file_pointer, 0L, SEEK_END);
-                    handler.size = ftell(file_pointer);
+                    fseek(open_file_pointer, 0L, SEEK_END);
+                    handler.size = ftell(open_file_pointer);
                     break;
                 }
             }
         }
     }
     printf("Name: %s\nExtension: .%s\nSize: %llu bytes", handler.name, handler.extension, handler.size);
+    delete_comments(handler);
     return 0;
 }
