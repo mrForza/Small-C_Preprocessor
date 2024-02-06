@@ -1,16 +1,10 @@
 #include  <stdio.h> // Подключение библиотеки ввода-вывода
 
-
+// Some comments
 void swap(int* px, int* py) {
     int temp = *px;
     *px = *py;
-    /*
-     *
-     * wefwefwebw
-     * Lorem ipsum
-     *               fjwb   oifow9-
-     * 32g3
-     2326437548657968079-*/
+    // Мы должны свапнуть два числа с помощью указателей
     *py = temp;
 }
 
@@ -20,4 +14,4 @@ int main()         // Главная функция
     printf("Hello, world!"); // Вывод сообщения
     getchar();               // Задержка окна консоли
     return 0;
-}
+} // Lorem ipsum doler sit amet
