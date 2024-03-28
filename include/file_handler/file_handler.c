@@ -51,8 +51,7 @@ char** split_full_name(const char* full_name) {
             extension[j] = '\0';
         }
     }
-    printf("!!! %s", name);
-    printf("!!! %s", extension);
+
     char** array = (char**)malloc(strlen(name) + strlen(extension));
     array[0] = name;
     array[1] = extension;

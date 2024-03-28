@@ -13,7 +13,6 @@ bool check_multiline_comment_existance(FILE* file_pointer) {
 }
 
 
-
 void delete_singleline_comments(struct file_handler handler) {
     FILE* write_file_pointer = fopen("formatted.c", "w");
     fseek(handler.file_pointer, 0L, SEEK_SET);
@@ -89,4 +88,26 @@ void delete_multiline_comments(struct file_handler handler) {
     fclose(write_file_pointer);
     fclose(handler.file_pointer);
     printf("%d", remove("formatted.c"));
+}
+
+
+void delete_repetitive_spaces(struct file_handler handler) {
+    handler.file_pointer = fopen("formatted_2.c", "r");
+    FILE* write_file_pointer = fopen("formatted_3.c", "w");
+    fseek(handler.file_pointer, 0L, SEEK_SET);
+    char prev_sym = (char)fgetc(handler.file_pointer);
+    char current_sym = (char)fgetc(handler.file_pointer);
+
+    fputc(prev_sym, write_file_pointer);
+    while (current_sym != EOF) {
+        if (prev_sym == ' ' && current_sym == ' ') {
+            current_sym = (char)fgetc(handler.file_pointer);
+            continue;
+        }
+        fputc(current_sym, write_file_pointer);
+        prev_sym = current_sym;
+        current_sym = (char)fgetc(handler.file_pointer);
+    }
+    fclose(write_file_pointer);
+    fclose(handler.file_pointer);
 }

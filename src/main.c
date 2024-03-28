@@ -42,5 +42,6 @@ int main() {
     delete_singleline_comments(handler);
     delete_multiline_comments(handler);
     fclose(handler.file_pointer);
+    delete_repetitive_spaces(handler);
     return 0;
 }

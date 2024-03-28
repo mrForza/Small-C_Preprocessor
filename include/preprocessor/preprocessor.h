@@ -13,3 +13,6 @@ void delete_multiline_comments(struct file_handler handler);
 
 
 void delete_singleline_comments(struct file_handler handler);
+
+
+void delete_repetitive_spaces(struct file_handler handler);
